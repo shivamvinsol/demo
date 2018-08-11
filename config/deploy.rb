@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
-server ENV['SHIVAMJAIN_SERVER_IP'], port: your_port_num, roles: [:web, :app, :db], primary: true
+server ENV['SHIVAMJAIN_SERVER_IP'], roles: [:web, :app, :db], primary: true
 
 set :application, "shivamjain"
 set :repo_url, "git@github.com:shivamvinsol/demo.git"
