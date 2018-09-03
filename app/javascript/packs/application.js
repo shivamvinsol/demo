@@ -7,6 +7,6 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-import 'jquery/dist/jquery';
-import 'popper.js/dist/umd/popper';
+import "jquery"
+import "jquery-ujs"
 import 'bootstrap/dist/js/bootstrap';
