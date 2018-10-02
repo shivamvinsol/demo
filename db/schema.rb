@@ -10,9 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_10_02_181217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "rental_id", null: false
+    t.date "start_date", null: false
+    t.date "stop_date", null: false
+    t.integer "guests", null: false
+    t.integer "review_score"
+    t.text "review_comments"
+    t.datetime "reviewed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rental_id"], name: "index_bookings_on_rental_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "rental_type", null: false
+    t.integer "accommodates", null: false
+    t.integer "bathrooms", null: false
+    t.integer "bedrooms", null: false
+    t.integer "beds", null: false
+    t.decimal "nightly_cost", precision: 8, scale: 2, null: false
+    t.text "description"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
+    t.string "street1", null: false
+    t.string "street2"
+    t.string "city", null: false
+    t.string "province"
+    t.string "country", null: false
+    t.string "postal_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_rentals_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
 
 end
