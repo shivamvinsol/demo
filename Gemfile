@@ -16,7 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'faker', '~> 1.9', '>= 1.9.1'
 end
 
 group :development do
@@ -42,8 +41,8 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'graphql', '~> 1.8', '>= 1.8.10'
 gem 'foreman'
+gem 'faker', '~> 1.9', '>= 1.9.1'
+gem 'graphql', '~> 1.8', '>= 1.8.10'
+gem 'graphiql-rails'#, group: :development
 gem 'webpacker', '~> 3.5'
-
-gem 'graphiql-rails', group: :development
