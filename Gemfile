@@ -5,6 +5,7 @@ ruby '2.5.0'
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bugsnag'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.21.0'
