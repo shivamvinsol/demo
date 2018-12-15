@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server '52.14.242.71', user: 'deploy', roles: [:web, :app, :db]
+server 'www.shivamjain.com', user: 'deploy', roles: [:web, :app, :db]
 
 # role-based syntax
 # ==================
